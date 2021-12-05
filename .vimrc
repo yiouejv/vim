@@ -15,6 +15,7 @@ set fileformat=unix
 set t_Co=256
 "let g:molokai_origin=1
 set background=dark
+colorscheme hybrid
 syntax enable
 
 let mapleader=','
@@ -53,5 +54,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-commentary'
 
 	Plug 'tpope/vim-fugitive'
+
+	Plug 'w0ng/vim-hybrid'
 call plug#end()
 
