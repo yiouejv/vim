@@ -2,6 +2,9 @@ set nu
 set hlsearch
 set confirm
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 set autoread
 set autoindent
 set ruler
@@ -17,6 +20,7 @@ set t_Co=256
 set background=dark
 colorscheme hybrid
 syntax enable
+set foldmethod=indent
 
 let mapleader=','
 nnoremap <leader>w <Esc>:w<cr>
