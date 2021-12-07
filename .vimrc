@@ -36,6 +36,9 @@ nnoremap <leader>g :NERDTreeToggle<cr>
 
 nmap ss <Plug>(easymotion-s2)
 
+"sudo apt-get install ack-grep
+nnoremap <Leader>a :Ack!<Space>
+
 call plug#begin('~/.vim/plugged')
 	Plug 'tomasr/molokai'
 
@@ -60,5 +63,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive'
 
 	Plug 'w0ng/vim-hybrid'
+
+	Plug 'mileszs/ack.vim'
 call plug#end()
 
