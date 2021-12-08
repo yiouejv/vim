@@ -16,11 +16,16 @@ set foldenable
 set fdm=syntax
 set fileformat=unix
 set t_Co=256
-"let g:molokai_origin=1
 set background=dark
 colorscheme hybrid
 syntax enable
 set foldmethod=indent
+set incsearch
+set hlsearch
+
+"如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
+set listchars=tab:»■,trail:■
+set list
 
 let mapleader=','
 nnoremap <leader>w <Esc>:w<cr>
@@ -33,6 +38,8 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <leader>v :NERDTreeFind<cr>
 nnoremap <leader>g :NERDTreeToggle<cr>
+nnoremap <leader>x gUiw
+nnoremap <leader>z guiw
 
 nmap ss <Plug>(easymotion-s2)
 
