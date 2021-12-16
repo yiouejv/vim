@@ -6,7 +6,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoread
-set autoindent
+" set autoindent
 set ruler
 set showcmd
 set guifont=Consolas:h14
