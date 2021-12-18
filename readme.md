@@ -59,3 +59,13 @@ UNIX/Linux 使用的是 0x0A（LF），早期的 Mac OS 使用的是 0x0D（CR�
     - ctrl b ;: 切换到最后一次使用的panel
     - ctrl b z: 当前panel 全屏，重新按切回来
     - ctrl b 方向键: 移动光标切换面板
+
+- 自定义 keyboard:
+
+vim ~/.tmux.conf
+
+# 绑定hjkl键为面板切换的上下左右键
+bind -r k select-pane -U # 绑定k为↑
+bind -r j select-pane -D # 绑定j为↓
+bind -r h select-pane -L # 绑定h为←
+bind -r l select-pane -R # 绑定l为→
