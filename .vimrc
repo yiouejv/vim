@@ -41,6 +41,13 @@ nnoremap <leader>g :NERDTreeToggle<cr>
 nnoremap <leader>x gUiwea
 nnoremap <leader>z guiwea
 
+" 支持在Visual模式下，通过C-y复制到系统剪切板
+" 查看是否支持 vim --version| grep "clipboard"
+" 不支持需要安装 sudo apt install vim-gtk
+vnoremap <C-y> "+y
+" " 支持在normal模式下，通过C-p粘贴系统剪切板
+nnoremap <C-p> "+p
+
 nmap ss <Plug>(easymotion-s2)
 
 "sudo apt-get install ack-grep
