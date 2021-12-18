@@ -6,7 +6,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoread
-set autoindent
+" set autoindent
 set ruler
 set showcmd
 set guifont=Consolas:h14
@@ -38,8 +38,8 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <leader>v :NERDTreeFind<cr>
 nnoremap <leader>g :NERDTreeToggle<cr>
-nnoremap <leader>x gUiw
-nnoremap <leader>z guiw
+nnoremap <leader>x gUiwea
+nnoremap <leader>z guiwea
 
 nmap ss <Plug>(easymotion-s2)
 
