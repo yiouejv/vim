@@ -64,8 +64,10 @@ UNIX/Linux 使用的是 0x0A（LF），早期的 Mac OS 使用的是 0x0D（CR�
 
 vim ~/.tmux.conf
 
+```
 # 绑定hjkl键为面板切换的上下左右键
 bind -r k select-pane -U # 绑定k为↑
 bind -r j select-pane -D # 绑定j为↓
 bind -r h select-pane -L # 绑定h为←
 bind -r l select-pane -R # 绑定l为→
+```
