@@ -22,6 +22,7 @@ syntax enable
 set foldmethod=indent
 set incsearch
 set hlsearch
+set ignorecase
 " vim 里的数都认为是十进制
 set nrformats=
 
