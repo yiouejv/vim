@@ -82,3 +82,23 @@ bind -r j select-pane -D # 绑定j为↓
 bind -r h select-pane -L # 绑定h为←
 bind -r l select-pane -R # 绑定l为→
 ```
+-------------------------------
+
+**其他工具**
+
+autojump
+
+- 安装：`apt-get install autojump`
+- 查找: find / -name "autojump.bash"
+- .bashrc: ./usr/share/autojump/autojump.bash
+
+用法: j keyword
+
+keyword 为目录关键词, 可以模糊匹配
+
+在使用 cd path 之后会自动记录到库里, 使用次数越多, 优先级越高
+
+/etc/profile.d/autojump.bash 内置了几个方法, 常用的当然就是: j
+
+查看统计: autojump --stat
+
