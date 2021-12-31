@@ -55,6 +55,9 @@ noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 " 当前编辑的buffer
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 
+" 打开一个窗口，展示你打开文件的函数, <C-p> 可以搜索文件往窗口里加
+noremap <leader>tt :Tlist<CR><CR>
+
 " 支持在Visual模式下，通过C-y复制到系统剪切板
 " 查看是否支持 vim --version| grep "clipboard"
 " 不支持需要安装 sudo apt install vim-gtk
@@ -95,5 +98,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mileszs/ack.vim'
 
     Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
+    Plug 'thisivan/vim-taglist'
+
 call plug#end()
 
