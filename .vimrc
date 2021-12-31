@@ -44,6 +44,17 @@ nnoremap <leader>g :NERDTreeToggle<cr>
 nnoremap <leader>x gUiwea
 nnoremap <leader>z guiwea
 
+" 搜索文件
+let g:Lf_ShortcutF = "<leader>ff"
+" 搜索函数
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+" 搜索单词
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+" 搜索最近使用过的文件 search most recently used files
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+" 当前编辑的buffer
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+
 " 支持在Visual模式下，通过C-y复制到系统剪切板
 " 查看是否支持 vim --version| grep "clipboard"
 " 不支持需要安装 sudo apt install vim-gtk
@@ -82,5 +93,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'w0ng/vim-hybrid'
 
 	Plug 'mileszs/ack.vim'
+
+    Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 call plug#end()
 
