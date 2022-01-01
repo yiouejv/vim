@@ -56,19 +56,34 @@ noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 
 " 打开一个窗口，展示你打开文件的函数, <C-p> 可以搜索文件往窗口里加
-noremap <leader>tt :Tlist<CR><CR>
+noremap <leader>t :Tlist<CR><CR>
+
+" airline theme config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='simple'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+
+" change tab
+nnoremap p[ :tabprevious<CR>
+nnoremap n[ :tabnext<CR>
+nnoremap tt :tab split<CR>
+
+nmap ss <Plug>(easymotion-s2)
+
+"""""""""""""""""""""""""""""""""""""""""""  以下是需要安装依赖的
+"sudo apt-get install ack-grep
+nnoremap <Leader>a :Ack!<Space>
 
 " 支持在Visual模式下，通过C-y复制到系统剪切板
 " 查看是否支持 vim --version| grep "clipboard"
 " 不支持需要安装 sudo apt install vim-gtk
 vnoremap <C-y> "+y
 " " 支持在normal模式下，通过C-p粘贴系统剪切板
-nnoremap <C-p> "+p
 
-nmap ss <Plug>(easymotion-s2)
-
-"sudo apt-get install ack-grep
-nnoremap <Leader>a :Ack!<Space>
+" sudo apt-get install ctags
+" Plug 'thisivan/vim-taglist'
 
 call plug#begin('~/.vim/plugged')
 	Plug 'tomasr/molokai'
