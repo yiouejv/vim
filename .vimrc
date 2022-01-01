@@ -69,7 +69,7 @@ nmap ss <Plug>(easymotion-s2)
 " 第一个列位于 vim 最左边，它快速显示当前文件的 git diff 信息
 " 第二个是]c和[c映射，让你可以在更改的行之间跳转
 
-""""""""""""""""""""""""""""""""""""""""""""""" 设好了几乎不动的配置
+""""""""""""""""""""""""""""""""""""""""""""""" 设好了机会不动的配置
 " airline theme config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='simple'
@@ -129,6 +129,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'thisivan/vim-taglist'
 
     Plug 'airblade/vim-gitgutter'
+
+    Plug 'rrethy/vim-illuminate'
+
+    Plug 'andrewradev/linediff.vim'
 
 call plug#end()
 
