@@ -58,19 +58,25 @@ noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 " 打开一个窗口，展示你打开文件的函数, <C-p> 可以搜索文件往窗口里加
 noremap <leader>t :Tlist<CR><CR>
 
-" airline theme config
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='simple'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-
-
 " change tab
 nnoremap p[ :tabprevious<CR>
 nnoremap n[ :tabnext<CR>
 nnoremap tt :tab split<CR>
 
 nmap ss <Plug>(easymotion-s2)
+
+""""""""""""""""""""""""""""""""""""""""""""""" 设好了几乎不动的配置
+" airline theme config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='simple'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" taglist
+let Tlist_Use_Right_Window=1
+let Tlist_File_Fold_Auto_Close=1 "非当前文件，函数列表折叠隐藏
+let Tlist_Exit_OnlyWindow=1 "当taglist是最后一个分割窗口时，自动退出vim
+
 
 """""""""""""""""""""""""""""""""""""""""""  以下是需要安装依赖的
 "sudo apt-get install ack-grep
@@ -85,6 +91,7 @@ vnoremap <C-y> "+y
 " sudo apt-get install ctags
 " Plug 'thisivan/vim-taglist'
 
+"""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 	Plug 'tomasr/molokai'
 
@@ -98,7 +105,8 @@ call plug#begin('~/.vim/plugged')
 	
 	Plug 'mhinz/vim-startify'
 
-	Plug 'ctrlpvim/ctrlp.vim'
+    " 已废弃
+	" Plug 'ctrlpvim/ctrlp.vim'
 
 	Plug 'easymotion/vim-easymotion'
 	
@@ -115,6 +123,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
     Plug 'thisivan/vim-taglist'
+
 
 call plug#end()
 
