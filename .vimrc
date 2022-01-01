@@ -60,7 +60,7 @@ noremap <leader>t :Tlist<CR><CR>
 
 " change tab
 nnoremap p[ :tabprevious<CR>
-nnoremap n[ :tabnext<CR>
+nnoremap p] :tabnext<CR>
 nnoremap tt :tab split<CR>
 
 nmap ss <Plug>(easymotion-s2)
