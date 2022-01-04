@@ -59,8 +59,8 @@ noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 noremap <leader>t :Tlist<CR><CR>
 
 " change tab
-nnoremap p[ :tabprevious<CR>
-nnoremap p] :tabnext<CR>
+nnoremap tp :tabprevious<CR>
+nnoremap tn :tabnext<CR>
 nnoremap tt :tab split<CR>
 
 nmap ss <Plug>(easymotion-s2)
