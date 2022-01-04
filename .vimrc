@@ -130,8 +130,6 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'airblade/vim-gitgutter'
 
-    Plug 'rrethy/vim-illuminate'
-
     Plug 'andrewradev/linediff.vim'
 
 call plug#end()
