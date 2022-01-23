@@ -32,7 +32,8 @@ set list
 
 let mapleader=','
 nnoremap <leader>w <Esc>:w<cr>
-inoremap jj <Esc>
+inoremap <leader>w <Esc>:w<cr>
+inoremap jj <Esc>`^
 set pastetoggle=<leader>p
 
 nnoremap <C-h> <C-w>h
