@@ -25,6 +25,7 @@ set hlsearch
 set ignorecase
 " vim 里的数都认为是十进制
 set nrformats=
+set backspace=2
 
 "如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
 set listchars=tab:»■,trail:■
