@@ -34,7 +34,7 @@ set list
 let mapleader=','
 nnoremap <leader>w <Esc>:w<cr>
 inoremap <leader>w <Esc>:w<cr>
-inoremap jj <Esc>`^
+inoremap jj <Esc>
 set pastetoggle=<leader>p
 
 nnoremap <C-h> <C-w>h
@@ -134,6 +134,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
 
     Plug 'andrewradev/linediff.vim'
+
+    Plug 'itchyny/vim-cursorword'
 
 call plug#end()
 
