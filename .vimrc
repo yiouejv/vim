@@ -99,6 +99,51 @@ vnoremap <C-y> "+y
 " Plug 'thisivan/vim-taglist'
 
 """""""""""""""""""""""""""""""""""""""""""""""
+
+
+"新建.py,.cc,.sh,.java文件，自动插入文件头"
+autocmd BufNewFile *.cpp,*.c,*.sh,*.py,*go exec ":call SetTitle()"
+    "定义函数SetTitle，自动插入文件头"
+func SetTitle()
+    if expand ("%:e") == 'sh'
+    call setline(1, "#!/bin/bash")
+    call setline(2, "#Author: yiouejv")
+    call setline(3, "#Email: yiouejv@126.com")
+    call setline(4, "#Time: ".strftime("%F %T"))
+    call setline(5, "#Name: ".expand("%"))
+    elseif expand ("%:e") == 'py'
+    call setline(1, '#!/bin/python3')
+    call setline(2, "#Author: yiouejv")
+    call setline(3, "#Email: yiouejv@126.com")
+    call setline(4, "#Time: ".strftime("%F %T"))
+    call setline(5, "#Name: ".expand("%"))
+    elseif expand ("%:e") == 'go'
+    call setline(1, 'package main')
+    call setline(2, "//Author: yiouejv")
+    call setline(3, "//Email: yiouejv@126.com")
+    call setline(4, "//Time: ".strftime("%F %T"))
+    call setline(5, "//Name: ".expand("%"))
+    call setline(6, "import \"fmt\"")
+    call setline(7, '')
+    call setline(8, 'func main() {')
+    call setline(9, '}')
+    elseif expand ("%:e") == "cpp"
+    call setline(1, "/*")
+    call setline(2, " *Author: yiouejv")
+    call setline(3, " *Email: yiouejv@126.com")
+    call setline(4, " *Time: ".strftime("%F %T"))
+    call setline(5, " *Name: ".expand("%"))
+    call setline(6, "*/")
+    call setline(7, "#include<iostream>")
+    call setline(8, "using namespace std;")
+    call setline(9, "")
+    call setline(10, "int main(int argc, const char *argv[]) {")
+    call setline(11, "    return 0;")
+    call setline(12, "}")
+    endif
+endfunc
+
+"""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 	Plug 'tomasr/molokai'
 
