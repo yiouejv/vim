@@ -89,6 +89,16 @@ bind -r h select-pane -L # 绑定h为←
 bind -r l select-pane -R # 绑定l为→
 ```
 -------------------------------
+**zsh**
+
+1. apt install zsh
+2. 安装ohmyzsh: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+3. cp vim/.zshrc .
+4. 检测命令是否出错: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+5. 自动补全插件，输入命令后会自动提示相关命令，使用方向键→可以实现自动补全: `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+6. 可以搜索命令历史的插件，使用Ctrl+R快捷键触发，模糊搜索历时使用的命令: `git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search`
+
+-------------------------------
 
 **其他工具**
 
