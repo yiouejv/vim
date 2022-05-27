@@ -71,6 +71,12 @@ nmap ss <Plug>(easymotion-s2)
 " gitgutter 增加了两个有用的东西。
 " 第一个列位于 vim 最左边，它快速显示当前文件的 git diff 信息
 " 第二个是]c和[c映射，让你可以在更改的行之间跳转
+"
+" vim-surround 插件
+" 删除配对的内容: ds" ds' ds[
+" 修改配对的内容: cs"' cs'" cs[{
+" 添加配对的内容: ysiw" ysiw'
+" 快速添加小括号: yssb
 
 """"""""""""""""""""""""""""""""""""""""""""""" 设好了机会不动的配置
 " airline theme config
@@ -103,7 +109,7 @@ vnoremap <C-y> "+y
 
 "新建.py,.cc,.sh,.java文件，自动插入文件头"
 autocmd BufNewFile *.cpp,*.c,*.sh,*.py,*go exec ":call SetTitle()"
-    "定义函数SetTitle，自动插入文件头"
+"定义函数SetTitle，自动插入文件头"
 func SetTitle()
     if expand ("%:e") == 'sh'
     call setline(1, "#!/bin/bash")
@@ -182,6 +188,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'andrewradev/linediff.vim'
 
     Plug 'itchyny/vim-cursorword'
+
+    Plug 'tpope/vim-surround'
 
 call plug#end()
 
