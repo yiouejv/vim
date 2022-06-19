@@ -108,7 +108,7 @@ vnoremap <C-y> "+y
 
 
 "新建.py,.cc,.sh,.java文件，自动插入文件头"
-autocmd BufNewFile *.cpp,*.c,*.sh,*.py,*go exec ":call SetTitle()"
+autocmd BufNewFile *.cpp,*.c,*.sh,*.py,*go,*html exec ":call SetTitle()"
 "定义函数SetTitle，自动插入文件头"
 func SetTitle()
     if expand ("%:e") == 'sh'
@@ -147,6 +147,33 @@ func SetTitle()
     call setline(10, "int main(int argc, const char *argv[]) {")
     call setline(11, "    return 0;")
     call setline(12, "}")
+    elseif expand ("%:e") == "html"
+    call setline(1, "<!DOCTYPE html>")
+    call setline(2, '<html lang="zh">')
+    call setline(3, "<head>")
+    call setline(4, '    <meta charset="UTF-8">')
+    call setline(5, "    <title>title</title>")
+    call setline(6, '    <script src="vue3.js"></script>')
+    call setline(7, '    <style type="text/css"></style>')
+    call setline(8, '    </style>')
+    call setline(9, "</head>")
+    call setline(10, "<body>")
+    call setline(11, "    <div id=\"app\">")
+    call setline(12, "    </div>")
+    call setline(13, "    <script>")
+    call setline(14, "        let app = Vue.createApp({")
+    call setline(15, "           data : function() {")
+    call setline(16, "           },")
+    call setline(17, "           computed : {")
+    call setline(18, "           },")
+    call setline(19, "           methods : {")
+    call setline(20, "           },")
+    call setline(21, "           watch : {")
+    call setline(22, "           },")
+    call setline(23, "        }).mount(\"#app\");")
+    call setline(24, "    </script>")
+    call setline(25, "</body>")
+    call setline(26, "</html>")
     endif
 endfunc
 
