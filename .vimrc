@@ -103,7 +103,6 @@ vnoremap <C-y> "+y
 
 " sudo apt-get install ctags
 " Plug 'thisivan/vim-taglist'
-
 """""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -220,3 +219,14 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+
+:command! Cvp call append(line('.'), "    cvp(user, pic, sim, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
+:command! Co  call append(line('.'), "    co(user, findStr, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
+:command! Cc  call append(line('.'), "    cc(user, color, sim, minLess, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
+:command! Gcn call append(line('.'), "    gcn(user, color, sim, x1, y1, x2, y2)")
+:command! Fcb call append(line('.'), "    fcb(user, &x, &y, x1, y1, x2, y2, color, sim, width, height, count)")
+:command! Fcblist call append(line('.'), "    fcblist(user, x1, y1, x2, y2, color, sim, width, height, count)")
+:command! Fcbck call append(line('.'), "    fcbck(user, x1, y1, x2, y2, color, sim, width, height, count, logStr)")
+
+:command! Dmfs call append(line('.'), "    dmfs(user, str, color, sim, x1, y1, x2, y2, font, clk, logStr)")
+:command! Dmocr call append(line('.'), "    dmocr(user, color, sim, x1, y1, x2, y2, font)")
