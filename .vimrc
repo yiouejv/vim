@@ -105,6 +105,11 @@ vnoremap <C-y> "+y
 " Plug 'thisivan/vim-taglist'
 
 " pip3 install --user pynvim
+" 需要vim8.2以上
+" apt remove vim
+" sudo add-apt-repository ppa:jonathonf/vim
+" sudo apt update
+" sudo apt install vim
 """""""""""""""""""""""""""""""""""""""""""""""
 
 
