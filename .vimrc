@@ -104,6 +104,12 @@ vnoremap <C-y> "+y
 " sudo apt-get install ctags
 " Plug 'thisivan/vim-taglist'
 
+" pip3 install --user pynvim
+" 需要vim8.2以上
+" apt remove vim
+" sudo add-apt-repository ppa:jonathonf/vim
+" sudo apt update
+" sudo apt install vim
 """""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -179,32 +185,32 @@ endfunc
 
 """""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-	Plug 'tomasr/molokai'
+        Plug 'tomasr/molokai'
 
-	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-	Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+        Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+        Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+        Plug 'vim-airline/vim-airline'
+        Plug 'vim-airline/vim-airline-themes'
 
-	Plug 'yggdroot/indentline'
-	
-	Plug 'mhinz/vim-startify'
+        Plug 'yggdroot/indentline'
+
+        Plug 'mhinz/vim-startify'
 
     " 已废弃
-	" Plug 'ctrlpvim/ctrlp.vim'
+        " Plug 'ctrlpvim/ctrlp.vim'
 
-	Plug 'easymotion/vim-easymotion'
-	
-	Plug 'lfv89/vim-interestingwords'
+        Plug 'easymotion/vim-easymotion'
 
-	Plug 'tpope/vim-commentary'
+        Plug 'lfv89/vim-interestingwords'
 
-	Plug 'tpope/vim-fugitive'
+        Plug 'tpope/vim-commentary'
 
-	Plug 'w0ng/vim-hybrid'
+        Plug 'tpope/vim-fugitive'
 
-	Plug 'mileszs/ack.vim'
+        Plug 'w0ng/vim-hybrid'
+
+        Plug 'mileszs/ack.vim'
 
     Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
@@ -218,5 +224,32 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-surround'
 
+    if has('nvim')
+      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+      Plug 'Shougo/deoplete.nvim'
+      Plug 'roxma/nvim-yarp'
+      Plug 'roxma/vim-hug-neovim-rpc'
+      Plug 'Shougo/deoplete-clangx'
+    endif
 call plug#end()
 
+" 控制补全的函数声明显示在vim 下面
+set completeopt+=preview
+set splitbelow
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+
+:command! Cvp call append(line('.'), "    cvp(user, pic, sim, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
+:command! Cvplist call append(line('.'), "    vector<vector<int>> poslist = cvplist(user, pic, sim, x1, y1, x2, y2)")
+:command! Co  call append(line('.'), "    co(user, findStr, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
+:command! Cc  call append(line('.'), "    cc(user, color, sim, minLess, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
+:command! Gcn call append(line('.'), "    gcn(user, color, sim, x1, y1, x2, y2)")
+:command! Fcb call append(line('.'), "    fcb(user, &x, &y, x1, y1, x2, y2, color, sim, width, height, count)")
+:command! Fcblist call append(line('.'), "    fcblist(user, x1, y1, x2, y2, color, sim, width, height, count)")
+:command! Fcbck call append(line('.'), "    fcbck(user, x1, y1, x2, y2, color, sim, width, height, count, logStr)")
+
+:command! Dmfs call append(line('.'), "    dmfs(user, str, color, sim, x1, y1, x2, y2, font, clk, logStr)")
+:command! Dmocr call append(line('.'), "    dmocr(user, color, sim, x1, y1, x2, y2, font)")
