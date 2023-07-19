@@ -103,6 +103,8 @@ vnoremap <C-y> "+y
 
 " sudo apt-get install ctags
 " Plug 'thisivan/vim-taglist'
+
+" pip3 install --user pynvim
 """""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -217,10 +219,26 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-surround'
 
+    if has('nvim')
+      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+      Plug 'Shougo/deoplete.nvim'
+      Plug 'roxma/nvim-yarp'
+      Plug 'roxma/vim-hug-neovim-rpc'
+      Plug 'Shougo/deoplete-clangx'
+    endif
 call plug#end()
+
+" 控制补全的函数声明显示在vim 下面
+set completeopt+=preview
+set splitbelow
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 
 :command! Cvp call append(line('.'), "    cvp(user, pic, sim, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
+:command! Cvplist call append(line('.'), "    vector<vector<int>> poslist = cvplist(user, pic, sim, x1, y1, x2, y2)")
 :command! Co  call append(line('.'), "    co(user, findStr, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
 :command! Cc  call append(line('.'), "    cc(user, color, sim, minLess, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
 :command! Gcn call append(line('.'), "    gcn(user, color, sim, x1, y1, x2, y2)")
