@@ -224,6 +224,9 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-surround'
 
+    " 设置编码 :FencView
+    Plug 'mbbill/fencview'
+
     if has('nvim')
       Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     else
