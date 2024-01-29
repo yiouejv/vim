@@ -4,6 +4,7 @@ cp vim/colors -r .vim/colors
 cp vim/autoload -r .vim/autoload
 cp vim/plugged -r .vim/plugged
 cp vim/.vimrc .vimrc
+cp vim/.zshrc .zshrc
 
 
 echo "alias tnew='tmux new -s'" >> .bashrc
@@ -17,3 +18,5 @@ echo "bind -r j select-pane -D # 绑定j为↓" >> ~/.tmux.conf
 echo "bind -r h select-pane -L # 绑定h为←" >> ~/.tmux.conf
 echo "bind -r l select-pane -R # 绑定l为→" >> ~/.tmux.conf
 
+apt-get install autojump
+source .zshrc
