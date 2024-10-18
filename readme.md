@@ -1,10 +1,29 @@
 - 安装方法
 
+```
 `cd ~`
+git clone https://github.com/yiouejv/vim
+cp vim .vim -r
+cp vim/.vimrc .
+cp vim/.bashrc .
+cp vim/zshrc .
 
-`git clone https://github.com/yiouejv/vim`
+apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp vim/.oh_my_zsh/ .
 
-`cp vim .vim -r`
+- 安装：`apt-get install autojump`
+- 查找: find / -name "autojump.bash"
+- .bashrc: ./usr/share/autojump/autojump.bash
+
+sudo apt-get install ack-grep
+sudo apt install vim-gtk
+sudo apt-get install ctags
+
+source .vimrc
+source .bashrc
+source .zshrc
+```
 
 - 可能存在的问题
 
