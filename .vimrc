@@ -227,6 +227,7 @@ call plug#begin('~/.vim/plugged')
     " 设置编码 :FencView
     Plug 'mbbill/fencview'
 
+    " 普通的补全
     if has('nvim')
       Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     else
@@ -235,6 +236,7 @@ call plug#begin('~/.vim/plugged')
       Plug 'roxma/vim-hug-neovim-rpc'
       Plug 'Shougo/deoplete-clangx'
     endif
+
 call plug#end()
 
 " 控制补全的函数声明显示在vim 下面
@@ -246,13 +248,3 @@ let g:deoplete#enable_at_startup = 1
 
 
 :command! Cvp call append(line('.'), "    cvp(user, pic, sim, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
-:command! Cvplist call append(line('.'), "    vector<vector<int>> poslist = cvplist(user, pic, sim, x1, y1, x2, y2)")
-:command! Co  call append(line('.'), "    co(user, findStr, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
-:command! Cc  call append(line('.'), "    cc(user, color, sim, minLess, x1, y1, x2, y2, count, xx, yy, oneSecNum, logStr, slp, bk)")
-:command! Gcn call append(line('.'), "    gcn(user, color, sim, x1, y1, x2, y2)")
-:command! Fcb call append(line('.'), "    fcb(user, &x, &y, x1, y1, x2, y2, color, sim, width, height, count)")
-:command! Fcblist call append(line('.'), "    fcblist(user, x1, y1, x2, y2, color, sim, width, height, count)")
-:command! Fcbck call append(line('.'), "    fcbck(user, x1, y1, x2, y2, color, sim, width, height, count, logStr)")
-
-:command! Dmfs call append(line('.'), "    dmfs(user, str, color, sim, x1, y1, x2, y2, font, clk, logStr)")
-:command! Dmocr call append(line('.'), "    dmocr(user, color, sim, x1, y1, x2, y2, font)")
