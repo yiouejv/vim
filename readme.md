@@ -8,6 +8,7 @@ cp vim/.vimrc .
 cp vim/.bashrc .
 cp vim/.zshrc .
 cp vim/.tmux.conf .
+cp vim/oh-my-zsh ./.oh-my-zsh -r
 
 apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
