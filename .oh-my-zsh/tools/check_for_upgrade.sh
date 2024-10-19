@@ -65,7 +65,11 @@ function is_update_available() {
   local remote_head
   remote_head=$(
     if (( ${+commands[curl]} )); then
+<<<<<<< Updated upstream
+      curl --connect-timeout 2 -fsSL -H 'Accept: application/vnd.github.v3.sha' $api_url 2>/dev/null
+=======
       curl -m 2 -fsSL -H 'Accept: application/vnd.github.v3.sha' $api_url 2>/dev/null
+>>>>>>> Stashed changes
     elif (( ${+commands[wget]} )); then
       wget -T 2 -O- --header='Accept: application/vnd.github.v3.sha' $api_url 2>/dev/null
     elif (( ${+commands[fetch]} )); then
