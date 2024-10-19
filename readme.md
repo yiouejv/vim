@@ -6,7 +6,8 @@ git clone https://github.com/yiouejv/vim
 cp vim .vim -r
 cp vim/.vimrc .
 cp vim/.bashrc .
-cp vim/zshrc .
+cp vim/.zshrc .
+cp vim/.tmux.conf .
 
 apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
